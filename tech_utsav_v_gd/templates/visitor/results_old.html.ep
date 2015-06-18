@@ -1,0 +1,45 @@
+% use Tie::IxHash;
+% my %columns = undef;
+% tie %columns, "Tie::IxHash";
+% %columns = %{$result->{header}->{columns} };     
+
+<div id="show" >
+	   <div id="form_columns">
+					   % foreach my $column ( values %columns ){
+					   %# next if ($column =~/address|remarks/i);
+									   <b>
+												   <div id="form_field_name">
+																  <%= $column %>
+												   </div>
+									   </b>
+					   % }
+	   </div>
+	   % my $count =0;
+	   % foreach my $i ( @{$result->{data}} ){
+			  
+			  % next if ($i->check_out_datetime =~ /\d{4}-/);
+			  
+			  % if ($count % 2 == 0 ) {
+						 <div id="row" class="table-bg-light">
+			  % } else {
+						 <div id="row" class="table-bg-dark">
+			  % };
+					  <form action="/vstr/checkout" method="get">
+							% foreach my $column(keys %columns){
+							%# next if ($column =~/address|remarks/i);
+								   <div id="form_field_data">
+										  % if($column =~ /check_out/){
+												 <input name="vistor_badge_id" type="hidden" value="<%=$i->vistor_badge_id %>" />
+												 <input class="push-right button-style" type="submit" value="Checkout" />													  
+										  % }else {
+												   %= $i->$column;
+										 % }
+								   </div>
+							% }						 								
+					  </form>
+		   </div>
+		   % $count++;
+	   % }
+<br/>
+%= include 'layouts/pagination';
+</div>

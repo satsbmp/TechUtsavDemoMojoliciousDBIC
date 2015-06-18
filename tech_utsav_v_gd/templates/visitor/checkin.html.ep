@@ -1,0 +1,42 @@
+% use Tie::IxHash;
+% my %columns = undef;
+% tie %columns, "Tie::IxHash";
+% %columns = %{$result->{header}->{columns} }; 
+% my $count =0;
+ % if ($count % 2 == 0 ) {
+						 <tr id="row" class="table-bg-light">
+			  % } else {
+						 <tr id="row" class="table-bg-dark">
+			  % };
+              % $count++;
+<div id="laptop_record_add_form" class="clearfix">  
+    <%= form_for '/vstr/checkin' =>(method=>'get')=>begin %>
+            
+            % foreach my $i (keys %columns){
+                % next if ($i =~ /date|time/);
+                 % if ($count % 2 != 0 ) {
+                    <div class="pull-left">
+                        <div id="form_field_name" class="clearfix form-margin-top">
+                            <b class="view-small pull-left "> <%= $columns{$i} %> : 	</b>                
+                            <input class="style-box pull-left long-size-box bg-img" name="<%= $i %>" type="text"  />
+                        </div>
+                    </div>
+                 % } else {
+                    <div class="pull-right">
+                        <div id="form_field_name" class="clearfix form-margin-top">
+                            <b class="view-small pull-left "> <%= $columns{$i} %> : 	</b>                
+                            <input class="style-box pull-left long-size-box bg-img" name="<%= $i %>" type="text"  />
+                        </div>
+                    </div>
+                % }
+                % $count++;
+            %}
+            
+            
+            <br/>
+            </div>
+                        <div id="form_submit_button" class="pull-right">					
+                                 <input class="button-style" type="submit" value="Visitor Checkin" />
+                        </div>
+                       <br/>
+    <%= end %>

@@ -1,0 +1,240 @@
+@import url("button.css");
+@import url("loginform.css");
+@import url("form.css");
+
+#container{
+  height:100%;
+  width:100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding:2px;
+  vertical-align:middle;
+}
+#container_middle{    
+  width: 95%;
+  height: 95%;
+  vertical-align:middle;
+}
+#leftspacewrapper{
+  width:10%;
+  height:99%;
+  text-align:left;
+  float:left;
+  clear:both;
+}
+#centerwrapper{
+  width:75%;
+  height:97%;
+  text-align:center;
+  float:left;
+  margin-left: auto;
+  margin-right: auto;
+  top:0;
+  left:0;
+  bottom: 0;
+  right:0;
+  position: absolute;
+  vertical-align:middle;
+}
+#rightspacewrapper{
+  width:10%;
+  height:99%;
+  text-align:left;
+  float:left;
+}
+#header{
+  height:12%;
+  width:99%;  
+  color:blue;
+  margin-top: 2px;
+  padding: 1px 1px 1px 1px;
+}
+#bodycontainer{
+  height:75%;
+  width:99%;
+}
+#footer{ 
+  height:9%;
+  width:99%;
+  text-align : center;
+  clear: both;
+  color:blue;
+  margin: 1px 1px 1px 1px;
+  padding: 1px 1px 1px 1px;
+}
+
+#menu{  
+  width:81%;
+  height:99%;
+  float:left;
+}
+#logo{
+  height:95%;
+  width:18%;
+  float:left;
+  padding: 1px 1px 1px 1px;
+  margin:  1px 1px 1px 1px;
+}
+#logo img{
+  height:99%;
+  width:99%;            
+}
+#spanheading{
+  height:65%;
+  width:99%;
+  margin: auto;
+  text-align: center;
+  font-size: xx-large;
+  text-decoration: underline;
+  font-family: monospace;
+  text-emphasis: circle;
+  color: Purple;
+  background-color:#f2feff;
+}
+/*
+padding: 1px 1px 1px 1px;
+*/
+#spantab{  
+  height:29%;
+  width:99%;
+  clear : left;
+  margin: auto;
+}
+
+#copyright{
+  float:left;
+  width:74%;
+  margin-top:5px;
+}
+#requestmenu{
+  float:left;
+  width:18%;
+  height: 97%;
+  padding: 10px 1px 1px 4px;
+  margin:  1px 1px 1px 1px;
+  background-color:#CCCCFF;
+  margin-left: auto;
+  margin-right: auto;
+  vertical-align:middle;
+  text-align:left;
+}
+#requestpage{
+  float:left;
+  width:80%;
+  height: 97%;
+  padding: 5px 1px 1px 4px;
+  margin-left:3px;
+  margin-right: 2px;
+  background-color:#E8E8FF;
+  vertical-align:middle;
+}
+#alignmenu{
+  width:100%;
+  height:100%;
+  margin-top:10px;
+  margin-left: auto;
+  margin-right: auto;
+  vertical-align:middle;
+  display: inline-block; 
+}
+#button{
+  text-align:left;
+  font-weight:bold;
+  font-size:1.2em;
+  width:150px;
+}
+input{
+  text-align:center;
+}
+#button:hover{
+  color:red;
+  font-size:100%;
+  background:yellow;
+  text-decoration:underline;
+}
+
+#resultsdata{
+  text-align: left;
+}
+#resultsheading{
+  padding: 1px 1px 1px 1px;
+  margin:  1px 1px 1px 1px;
+  font-weight: bold;
+  text-align: center;
+  height :30px;
+}
+
+#row{
+  clear:both;
+}
+#field{
+  float:left;
+  padding: 1px 1px 1px 1px;
+  text-align: left;
+  position: relative;
+  width:100px;
+}
+#field2{
+  float:left;
+}
+#tacreport{
+
+}
+#fields{
+  background-color: #CCCCFF;
+  float:left;
+}
+#fieldval{
+  clear:both;
+}
+#rfield{
+  float:left;
+  text-align: left;
+  font-size: 12px;
+  font-weight: bold;
+  width: 75px;
+}
+/*
+ float:left;
+  float:right;
+  height:75%;
+  vertical-align:middle;
+
+*/
+#loginpage{
+  padding: 5px 1px 1px 4px;
+  margin:  5px 5px 5px 5px;
+  background-color:#E8E8FF;  
+  text-align: center;
+  width:98%;
+  height:74%;
+  vertical-align:middle;
+  position: relative;
+}
+#submit{
+  clear:both;
+}
+#employeesearchform{
+  width:40%;
+  height:40%;
+  clear:both;
+  vertical-align:middle;
+  margin-left:auto;
+  margin-right:auto;
+  position: relative;  
+}
+#tabmenu{
+  float:left;
+}
+
+#loadform{
+  clear:both;
+}
+#message{
+  clear:both;
+ text-align: center;
+}
+/*
+http://www.beginnersguidetohtml.com/guides/css/layout/absolute-relative-positioning
+http://webcodertools.com/imagetobase64converter/Create
+*/

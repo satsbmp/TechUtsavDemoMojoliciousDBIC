@@ -1,0 +1,5 @@
+<div id="requestpage" class="pull-left">
+    %= content_for 'js_imports';
+    %= content
+    
+</div>

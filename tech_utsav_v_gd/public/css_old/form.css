@@ -1,0 +1,162 @@
+
+#formcontainer{
+    width:30%;
+    height:25%;
+    border: 1px dotted green;    
+    padding: 5px 2px 2px 4px;
+    margin: auto;       
+    position: absolute;
+}
+#form{
+    border: 1px dotted green;    
+    padding: 5px 2px 2px 4px;
+    margin: auto;       
+    position: absolute;
+}
+#heading,#formheading,#columnheading,#form_columnheading{
+    border: 1px dotted green;
+    background-color:#f2fabb;
+    height:auto;
+    padding: 1px 1px 1px 1px;
+}
+#form_columns{
+    padding: 1px 1px 1px 1px;
+    margin: 1px 1px 1px 1px;
+}
+#form #form_msg_field{
+  clear:inherit;
+  float:left;
+  padding: 1px 1px 1px 1px;  
+  width: 135px;
+  height: 25px;
+  margin: auto;
+  text-align: left;
+}
+#form #form_textbox{
+  float:left;
+  padding: 1px 1px 1px 1px;
+  text-align: left;  
+  width: auto;
+  height: 25px;
+  margin: auto;
+}
+#form #form_submit_button,#submit_button{
+  float:left;
+  padding: 1px 1px 1px 1px;
+  border: 1px solid green;
+  text-align: left;  
+  width: inherit; 
+  height: 25px;
+  margin: auto;
+  position:relative;
+}
+#form{
+    margin: auto;
+    top:auto;
+    left:auto;
+    bottom: auto;
+    right:auto;    
+    position: absolute;
+    vertical-align: middle;
+}
+#form #textfield,#field{
+    float:left;
+    text-align:left;
+    margin: auto;
+}
+
+#request_tac{
+    float:left;  
+}
+#request_tac_add{
+    width:50%;
+    float:left;
+    display:none;
+}
+#render_tac{
+    float:left;  
+}
+#render_tac_render{
+    float:left;
+    width:35%;
+    display:none;
+}
+#request_tac_container{
+ float:left; 
+}
+#render_tac_container{
+ float:left;
+}
+#tacresults{
+    height:50%;  
+}
+#tac_request_render_form{
+ height:25%;
+ width:95%;
+}
+#tacshow{
+    height:99%;
+    height:99%;
+}
+#checkout_form,#checkin_form{
+    clear:both;
+    height:15%;
+    width:90%;
+    border: 1px dotted green;  
+}
+
+#results{
+    clear:both;
+    height:auto;
+}
+#show{
+    height:99%;
+}
+#formcontent{
+    vertical-align:middle;
+    margin: auto;
+    top: 0; left: 0; bottom: 0; right: 0;    
+    position: absolute;
+    text-align: center;    
+}
+
+#form_field_name{
+    width:120px;
+    float:left;
+    padding: 1px 1px 1px 1px;
+    margin : 1px 1px 1px 1px;
+    border: 1px solid green ;
+    background-color: #f2feff;
+    text-align: center;
+}
+#form_field_data{
+    width:120px;
+    float:left;
+    padding: 1px 1px 1px 1px;
+    margin : 1px 1px 1px 1px;
+    border: 1px dotted green ;
+    text-align: center;
+}
+#text_field{
+    width: 124px;
+}
+#field{
+    width:120px;
+}
+ /*display:none;*/
+
+/*
+ border: 1px solid green;
+ clear: both;
+ margin:  5px 5px 5px 5px;
+ vertical-align: bottom;
+ position: relative;
+ display:  inline-block;
+vertical-align: middle;
+overflow: auto;
+margin-left: auto;
+margin-right: auto;
+margin-top: auto;
+margin-bottom: auto;
+top: 0; left: 0; bottom: 0; right: 0; 
+*/

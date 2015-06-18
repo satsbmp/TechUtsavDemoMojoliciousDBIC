@@ -1,0 +1,27 @@
+% layout 'techutsav';
+% title 'TechUtsav-Stationary-Results';
+
+<link rel="stylesheet" type="text/css" media="screen" href="/css/stationary.css" />
+
+% my $type= 'stnry';
+
+<div id="show">
+		<div id="results" class="clearfix"> 
+				<div class="page-head pull-left">
+					<h3>Stationary Request</h3>
+				</div>
+				%= include 'employee/search';
+		</div>
+		<div class="heading clearfix">
+				% if ( defined $result ) {
+						%= include 'employee/details';		
+						<br/><br/><br/>
+						%= include 'stationary/add';
+						<br/>
+						%= include 'layouts/message';
+						<br/><br/>					  
+						%= include 'stationary/results';
+						
+				% }
+		</div>
+</div>

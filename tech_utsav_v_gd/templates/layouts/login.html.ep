@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title><%= title %></title>
+  <link rel="stylesheet" type="text/css" media="screen" href="/css/main.css" />
+  <script type="text/javascript"></script>   
+  </head>
+  
+  <body>
+  <!-- ********************************************************************* -->
+  %# Container STARTS HERE
+    <div id="container">
+      <div id="container_middle">
+        %# <div id="leftspacewrapper"></div>
+        <!-- ********************************************************************* -->
+        <div id="centerwrapper">
+        <!-- ********************************************************************* -->
+          %#HEader STARTS HERE        
+              %= include 'layouts/header'       
+          %#HEader ENDS HERE
+          <!-- ********************************************************************* -->  
+          %#BODY STARTS HERE
+            <div id="loginpage">
+             <%= content %>
+            </div>
+          %#BODY ENDS HERE
+          <!-- ********************************************************************* -->
+          %#Footer  STARTS HERE
+            %= include 'layouts/footer'
+          %#Footer ENDS HERE
+          <!-- ********************************************************************* -->
+        </div>
+        <!-- ********************************************************************* -->      
+        %# <div id="rightspacewrapper"></div>
+      </div>
+  </div>
+  %# Container ENDSS HERE
+  <!-- ********************************************************************* -->
+  </body>
+</html>
+%#https://github.com/alexanderBendo/Experiments/blob/master/exp0001/mojolicious-auth-session.pl

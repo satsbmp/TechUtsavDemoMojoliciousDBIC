@@ -1,0 +1,5 @@
+<div id="message">
+    <% if (my $message = flash 'message' ) { %>
+        <b><%= $message %></b><br>
+    <% } %>
+</div>

@@ -1,0 +1,20 @@
+% layout 'techutsav';
+% title 'TechUtsav-Laptop-Details';
+%= stylesheet '/css/visitor.css';
+
+%#<link rel="stylesheet" type="text/css" media="screen" href="/css/visitor.css" />
+
+  <div id="results" class="clearfix"> 
+          <div class="page-head pull-left">
+              <h3>Visitor Entry</h3>              
+          </div>
+  </div>
+  <div class="heading clearfix">
+          % if ( defined $result ) {
+                %= include 'visitor/checkin';
+               <br/><br/>
+                %= include 'layouts/message';
+                <br/>
+                %= include 'visitor/results';
+          % }
+  </div>

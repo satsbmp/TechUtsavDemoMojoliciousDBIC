@@ -1,0 +1,30 @@
+% layout 'techutsav';
+% title 'TechUtsav-Laptop-Details';
+
+<link rel="stylesheet" type="text/css" media="screen" href="/css/laptop.css" />
+
+  <div id="results" class="clearfix"> 
+          <div class="page-head pull-left">
+              <h3>Laptop Entry</h3>
+          </div>
+          %= include 'employee/search';
+         
+  </div>
+  <div class="heading clearfix">
+       
+        % if ( defined $result ) {
+                  %= include 'employee/details';
+                  <br/><br/><br/>
+                  
+                % if ( defined $checkin_type &&  $checkin_type =~ /checkin/ ) {
+                        %= include 'laptop/checkin';
+                % } else {  
+                        %= include 'laptop/add';
+                % }
+                <br/>
+                %= include 'layouts/message';
+                <br/><br/>
+                %= include 'laptop/results';
+          % }
+  </div>
+

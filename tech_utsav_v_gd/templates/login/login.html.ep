@@ -1,0 +1,41 @@
+% layout 'login';
+% title 'TechUtsav-Login';
+
+
+<div id="loginform">
+
+<div id="loginheading">
+<h3>Welcome to SPAN Intranet Services!</h3>                     
+</div>
+<h4>
+<div id="loginformact">
+<%= form_for login =>(method=>'post')=>begin %>
+                            <div id="message">
+                                                        <% if (my $message = flash 'message' ) { %>
+                                                            <b><%= $message %></b><br>
+                                                        <% } %>
+                            </div>
+                           <div id="loginfield">
+                                                       Name &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:
+                           </div>
+                            <div id="textbox">
+                                                      <%= text_field 'user',id=>"textfield" %>
+                           </div>
+                            <br/>
+                            <div id="loginfield">
+                                                        Password &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:
+                            </div>
+                            <div id="textbox">
+                                                       <%= password_field 'pass',id=>"textfield" %>
+                            </div>
+                            <br/>
+                            <div id="loginfield">
+                                                        Login to iSPAN :
+                            </div>                            
+                            <div id="submitbutton">
+                                                        <i><%= submit_button 'iSPANLogin' %> </i>
+                            </div>
+<%= end %>
+<div>
+</h4>
+</div>

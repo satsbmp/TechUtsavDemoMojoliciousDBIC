@@ -1,0 +1,21 @@
+<div id="form">
+        <%= form_for '/tac/render' =>(method=>'post')=>begin %>
+                <div id="heading">
+                        <b>Render Temporary Access Card !</b>
+                </div>
+                <br/>
+                <div id="form_msg_field">
+                        Enter TAC Id :
+                </div>
+                 <div id="form_textbox">
+                        <%= text_field 'tacid',id=>"textfield" %>
+                </div>
+                 <br/>
+                 <div id="form_msg_field">
+                        Request TAC Id :
+                </div>
+                <div id="form_submit_button">
+                        <i><%= submit_button 'RenderTAC' %> </i>
+                </div>
+        <%= end %>
+</div>

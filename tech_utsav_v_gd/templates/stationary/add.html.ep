@@ -1,0 +1,30 @@
+<div id="laptop_record_add_form" class="clearfix">
+        <form class="clearfix" action="/stnry/add" method="get">                
+                        <div class="pull-left bar-right">
+                                <div id="form_field_name" class="clearfix form-margin-top">
+                                        <b class="view-small pull-left ">  Select Item : 	</b>
+                                        <input list="stationaryitems" name="stationaryitems" class="style-box pull-left long-size-box bg-img" required>
+                                                <datalist id="stationaryitems">
+                                                        % foreach my $i ($result->{data}->{entries}->item_list()){														
+                                                                <option name="item_name">
+                                                                        <%= $i->item_name %>
+                                                                </option>
+                                                        %}  
+                                                </datalist>
+                                        </input> 
+                                </div>
+                        
+                        
+                                <div id="form_field_name" class="clearfix form-margin-top">
+                                        <b class="view-small pull-left ">    Item Count : 	</b>
+                                        <input class="style-box pull-left long-size-box bg-img" name="stationary_item_count" type="text"  />  
+                                </div>          
+                        </div>
+                        <div class="btn-margin pull-left">
+                                <div id="form_submit_button">
+                                        <input class="button-style" type="submit" value="Request Item" />
+                                </div>
+                        </div>
+                        <br/>
+        </form>
+</div>

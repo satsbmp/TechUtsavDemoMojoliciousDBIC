@@ -1,0 +1,45 @@
+#formcolumns{
+    border: 1px dashed;
+}
+#text_field{
+    width: 124px;
+}
+#field{
+    width:120px;
+}
+#form_field_name{
+    width:120px;
+    float:left;
+    padding: 1px 1px 1px 1px;
+    margin : 1px 1px 1px 1px;
+    border: 1px solid green ;
+    background-color: #f2feff;
+    text-align: center;
+}
+#form_field_data{
+    width:120px;
+    float:left;
+    padding: 1px 1px 1px 1px;
+    margin : 1px 1px 1px 1px;
+    border: 1px dotted green ;
+    text-align: center;
+}
+#visitor_checkout,#visitor_checkin{
+    float:left;
+}
+#form_container{
+    clear:both;
+}
+#others{
+    height: 40%;
+}
+#result{
+    height: 55%;
+}
+#checkout_form,#checkin_form{
+    float:left;
+    height:30%;
+    width:30%;
+    border: 1px dotted green;
+    display:none;
+}

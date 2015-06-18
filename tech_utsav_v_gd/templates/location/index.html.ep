@@ -1,0 +1,28 @@
+% layout 'techutsav';
+% title 'TechUtsav-EmployeeSaerch';
+
+<div id="employeesearch">
+<h1>EmployeeSearch</h1>
+<%= $self->url_for %>
+<br/><br/><br/>
+% my $a="Enter Employee ID";
+
+<form action="<%= url_for("results/location")%>" method="get">
+                            <fieldset>
+                            <br/><br/>
+                            <div><b>EmployeeId</b></div>
+                            <div>
+                                                        <input type="text" name="empId"></input>
+                                                        <input type="hidden"><%= $a %></input>
+                                                        <input type="submit" name="submit" value="submit" />
+                            </div>
+                            
+                            <br/>
+                            </fieldset>
+</form>
+</div>
+<h2>Welcome to the Mojolicious real-time web framework!</h2>
+
+<div>
+%= link_to 'More' => '/tac'
+</div>

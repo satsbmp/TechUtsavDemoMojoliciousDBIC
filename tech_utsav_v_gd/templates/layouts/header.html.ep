@@ -1,0 +1,90 @@
+<div id="header-brd"></div>
+<div id="header">
+  <div class="header-section">
+        <div id="logo">
+                <img width="223" height="46" alt="ispan" title="ispan" src="/images/logoc.png">
+        </div>
+        <div class="header-right-section">
+            <!--Picker Starts-->
+            <div class="dropdown-picker-section">
+                <dl class="dropdown min-margin-right">
+                    <dt class="clear-fix"><span>Site:</span> <a href="#">Corporate</a></dt>
+                    <dd>
+                        <ul style="display: none;">
+                            <li><a href="http://ispan.com/blr/SitePages/Home.aspx">Bangalore</a></li>
+                            <li><a href="http://ispan.com/chd/SitePages/Home.aspx">Chandigarh</a></li>
+                            <li><a href="#">Corporate</a></li>
+                        </ul>
+                    </dd>
+                </dl>
+                <dl class="dropdown">
+                    <dt class="clear-fix"><span>Language:</span>English</dt>
+                    <!--<dd>
+                        <ul>
+                            <li><a href="#">English</a></li>
+                            <li><a href="#">Kannada</a></li>
+                            <li><a href="#">Hindi</a></li>
+                        </ul>
+                    </dd>-->
+                </dl>
+            </div>
+
+            <!--Picker ends-->
+            <!--Main menu navigation starts-->
+             <div id="main-menu"><ul>
+    <li><a href="http://ispan.com/SitePages/VerticalLanding.aspx"><span class="menu-text">Verticals</span> </a>
+        <ul class="submenu">
+            <li><a href="http://bfs.ispan.com">Banking &amp; Financial Services</a></li>
+            <li><a href="http://insurance.ispan.com">Insurance</a></li>
+            <li><a href="http://retail.ispan.com">Retail</a></li>
+			<li><a href="http://ttl.ispan.com">Travel Transport &amp; Logistics</a></li>
+        </ul>
+    </li>
+    <li><a href="http://practices.ispan.com"><span class="menu-text">Practices</span> </a>
+        <ul class="submenu">
+                        <li><a href="http://practices.ispan.com/ACE">ACE</a></li>
+			<li><a href="http://practices.ispan.com/ApplicationsTeam">Applications Team</a></li>
+			<li><a href="http://practices.ispan.com/BTU">BTU</a></li>
+			<li><a href="http://practices.ispan.com/CCG">CCG</a></li>
+                        <li><a href="http://practices.ispan.com/DWBI">DW &amp; BI</a></li>
+			<li><a href="http://practices.ispan.com/ERP">ERP</a></li>
+			<li><a href="http://practices.ispan.com/InfrastructureServices/">Infrastructure Services</a></li>
+			<li><a href="http://practices.ispan.com/LegacySoftwareSolutions/">Legacy Software Solutions</a></li>
+                        <li><a href="http://practices.ispan.com/mobile">Mobile</a></li>
+			<li><a href="http://practices.ispan.com/NetworkOperations">Network Operations</a></li>
+                        <li><a href="http://practices.ispan.com/testing">Testing</a></li>
+        </ul>
+    </li>
+    <li><a href="http://depts.ispan.com"><span class="menu-text">Departments</span> </a>
+        <ul class="submenu">
+            <li><a href="http://depts.ispan.com/Accounts">Accounts</a></li>
+            <li><a href="http://depts.ispan.com/HR">HR</a></li>
+            <li><a href="http://depts.ispan.com/IT">IT</a></li>
+            <li><a href="http://depts.ispan.com/Legal">Legal</a></li>
+            <li><a href="http://depts.ispan.com/Operations">Operations</a></li>
+            <li><a href="http://depts.ispan.com/PreSales">PreSales</a></li>
+            <li><a href="http://depts.ispan.com/quality">Quality</a></li>
+        </ul>
+    </li>
+    <li><a href="http://ispan.com/SitePages/Projects.aspx"><span>Projects</span></a>
+        <ul class="submenu">
+            <li><a href="http://bfspmts.ispan.com">Banking &amp; Financial Services</a></li>
+            <li><a href="http://insurancepmts.ispan.com">Insurance</a></li>
+            <li><a href="http://practicespmts.ispan.com">Practices</a></li>
+            <li><a href="http://retailpmts.ispan.com">Retail</a></li>
+        </ul>
+    </li>
+    <li class="clear"></li>
+</ul>
+<div class="search-section">
+    <div class="search-button">
+        <input type="text" onfocus="Clear();" onkeypress="if (event.keyCode == 13) mySearch(event);" value="Enterprise Search" id="SearchBox">
+        <a style="cursor: pointer" onclick="Redirect();"></a>
+    </div>
+</div>
+</div>
+
+            <!--Main menu navigation ends-->
+        </div>
+    </div>
+  </div>

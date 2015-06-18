@@ -1,0 +1,25 @@
+% use Tie::IxHash;
+% my %requestarray;
+% tie %requestarray, "Tie::IxHash";
+%#Courier =>'courier',;
+
+%# %requestarray=('TAC Request'=>'/tac', 'Laptop Entry' =>'/lptp', 'Stationary Request' =>'/stnry', 'Visitor Entry' =>'/vstr', Reports=>'rprts');
+% %requestarray=('TAC Request'=>'tac', 'Laptop Entry' =>'lptp', 'Stationary Request' =>'stnry', 'Visitor Entry' =>'vstr', Reports=>'rprts');
+
+% $self->app->log->debug("\nREQUESTMENU:".$self->req->url . ":");
+% my $class= undef;
+
+<div id="requestmenu">
+		<div id="alignmenu" class="pull-left">
+				% for my $req(keys %requestarray){                                
+                % $class = ($self->req->url =~ /$requestarray{$req}/) ? 'myButton main-menuactive' : 'myButton';
+						<div id="button">
+                                <b>
+                                  <a href="<%= '/'.$requestarray{$req} %>" class="<%= $class %>" onclick="" style="width:150px;">
+                                      %=$req
+                                  </a>
+                                </b>
+						</div>
+				% }
+		</div>
+</div>

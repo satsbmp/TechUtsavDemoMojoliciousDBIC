@@ -1,0 +1,25 @@
+#form_submit_button_checkin{
+	margin-top : 10px;
+	margin-left : 10px;
+}
+
+#form_submit_button_add{
+	margin-top : 50px;
+	margin-left : 50px;
+}
+
+#form_columns b, #form_field_name b {
+    display: table-cell;
+    font-size: 14px;
+    padding: 8px;
+    width: 138px;
+    text-align: left;
+}
+
+#form_field_data {
+    display: table-cell;
+    font-size: 12px;
+    padding: 8px;
+    text-align: left;
+    width: 138px;
+}

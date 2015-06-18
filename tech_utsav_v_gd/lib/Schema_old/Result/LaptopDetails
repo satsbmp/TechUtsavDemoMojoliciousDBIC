@@ -1,0 +1,43 @@
+package Schema::Result::LaptopDetails;
+
+#use Moose;
+#use MooseX::MarkAsMethods autoclean => 1;
+#extends 'Veure::Schema::Result::Email';
+
+use base qw/DBIx::Class::Core/;
+
+#create view laptop_details AS select a.laptop_id,a.employee_id,a.check_in_datetime,a.check_out_datetime,b.laptop_serial_id,b.laptop_company_name,b.laptoptype from laptop_entry a JOIN laptop_record b on a.employee_id=b.employee_id where a.employee_id=5743
+#my $scary_sql_here='select lr.employee_id,lr.laptop_id, lr.laptop_serial_id, lr.laptop_company_name, lr.laptoptype, le.check_in_datetime, le.check_out_datetime from laptop_entry le JOIN laptop_record lr on lr.laptop_id=le.laptop_id where employee_id = ?';
+my $scary_sql_here='select a.laptop_id,a.employee_id,a.check_in_datetime,a.check_out_datetime,b.laptop_serial_id,b.laptop_company_name,b.laptoptype from laptop_entry a JOIN laptop_record b on a.employee_id=b.employee_id;';
+
+__PACKAGE__->table_class('DBIx::Class::ResultSource::View');
+__PACKAGE__->table("laptop_details");    # XXX virtual view name. Doesn't exist
+
+# is_virtual allows us to use bind parameters
+__PACKAGE__->result_source_instance->is_virtual(1);
+__PACKAGE__->result_source_instance->view_definition($scary_sql_here);
+__PACKAGE__->meta->make_immutable;
+
+__PACKAGE__->add_columns(  
+  "employee_id",
+  { data_type => "int", is_nullable => 1 },
+  "laptop_id",
+  { data_type => "int", is_nullable => 1 },
+  "check_in_datetime",
+  {
+    data_type     => "timestamp",
+    default_value => \"current_timestamp",
+    is_nullable   => 1,
+  },
+  "check_out_datetime",
+  { data_type => "timestamp", is_nullable => 1 },
+   "laptop_serial_id",
+  { data_type => "int", is_nullable => 1 },
+  "laptop_company_name",
+  { data_type => "varchar", is_nullable => 1, size => 50 },
+  "laptoptype",
+  { data_type => "varchar", is_nullable => 1, size => 50 },  
+);
+
+
+1;

@@ -1,0 +1,15 @@
+<div class="emp-details">
+		<div class="emp pull-left clearfix">
+				<img class="pull-left" src="/images/iconemp.png" alt="Employee Name"/>
+				<h4>
+						<%= $result->{header}->{employee}->{employee_name} %>
+				</h4>
+		</div>
+		<div class="emp-id pull-left clearfix">
+				<img class="pull-left" src="/images/empid.png" alt="EMployee Name" width="25" height="25" />
+				<h4>
+						<%= $result->{header}->{employee}->{employee_id} %>
+				</h4>
+		</div>
+</div>
+

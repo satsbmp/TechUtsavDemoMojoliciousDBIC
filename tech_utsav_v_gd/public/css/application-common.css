@@ -1,0 +1,188 @@
+@charset "utf-8";
+/* CSS Document */
+.clearfix:after{
+	display:block;
+	clear:both;
+	content:" ";
+	height:0;
+	visibility:hidden;
+}
+.pull-left{
+	float:left;
+}
+.pull-right{
+	float:right;
+}
+#bodycontainer {
+	margin-top:10px;
+}
+#alignmenu{
+	height:480px;
+	background-color:#e5e5e5;
+	text-shadow: 0px 1px 0 rgba(255,255,255,1); 
+}
+#results{
+	padding-bottom:10px;
+}
+
+.search input{
+	margin-right:10px;
+	border: 1px solid #c2c4c5;
+}
+.heading{
+	border-top: 2px solid #19a5f0
+}
+#button a {
+	padding:15px 18px;
+	display:block;
+	background-color: #f2f2f2;
+	border-bottom: 1px solid #d8d8d8;
+}
+#button a:hover, #button a.main-menuactive {
+	background:#19a5f0 url(../images/arroww.png) no-repeat right center;
+	color:#fff;
+}
+a.myButton{
+	color: #383838;
+	font-size: 13px;
+}
+#requestpage{
+	width:77%;
+	padding:0 15px 15px 15px;
+	}
+h3{
+	font-size:22px;
+	color:#70ba05;
+	margin-top:5px;
+}
+#laptop_record_add_form{
+	margin:15px 0;
+}
+.emp, .emp-id{
+/*	background:url(icon.png) no-repeat 0 0;*/
+	padding:17px 21px 0 0; 
+}
+#form_submit_button{
+	margin-top:50px;
+	margin-left:10px;
+}
+h4{
+	font-size:16px;
+	color:#63632e;
+	padding:4px 0 0 8px;
+	display:inline-block
+}
+#filterDropdownDiv{
+	position: absolute;
+}
+#outerFilterDiv{
+	position: absolute; left: 497px;
+}
+#outerFilterDiv input{
+	width: 212px;
+        position: absolute;
+		z-index: 3;
+		height:28px;
+}
+/*#outerFilterDiv select{
+	position: absolute;
+        top: 0px; left: 0px; z-index: 1; height:32px;
+		width:222px;
+}*/
+#form_columnheading b, #form_field_name b, #form_columns b{
+		font-weight:normal;
+}
+.normal{
+	width:90px !important;
+}
+.view-small{
+	width:100px !important;
+}
+#form_columns b, #form_field_name b{
+	display:table-cell;
+	width:135px;
+	padding:8px 8px;
+	font-size:14px;
+}
+.form-margin-top{
+	margin-top:10px;
+}
+input.push-right{
+	padding:2px 8px;
+	background-color:#878886;
+	font-size:11px;
+}
+input.push-right:hover{
+	background-color:#19a5f0;
+}
+#form_field_data{
+	display:table-cell;
+	width:107px;
+	text-align:justify;
+	padding:8px 10px;
+	font-size:12px;
+}
+.button-style{
+	background-color:#70ba05;
+	color:#fff;
+	border:0;
+	padding:6px;
+	font-family:Arial, Helvetica, sans-serif;
+}
+.button-style:hover{
+	background-color:#a9d36c;
+	color:#fff;
+}
+.table-bg-light{
+	background-color:#fafafa;
+}
+.table-bg-dark{
+	background-color:#e6e6e5;
+}
+
+.style-box{
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+    height: 30px;
+	padding-left:6px;
+	color:#333;
+}
+#form_columns{
+	background-color:#b4b4b4;
+	color:#fff;
+}
+#container{
+	padding:10px 0;
+}
+.empty-space{
+	height:100px;
+}
+.page {
+    display: inline-block;
+    padding: 5px 12px;
+    margin-right: 4px;
+    border: solid 1px #c0c0c0;
+    font-size: .875em;
+    color: #717171;
+}
+.page:hover {
+    background: #E9E9E9;
+}
+.page.active {
+    border: none;
+    background: #eca502;
+    color: #f0f0f0;
+}
+.long-size-box{
+	width:215px;
+	border: 1px solid #c2c4c5;
+}
+.bar-right{
+	width:415px;
+	border-right:1px solid #CCC;
+}
+.btn-margin{
+	margin-left:23px;
+}
+#form_field_name select{
+	width:237px;
+}

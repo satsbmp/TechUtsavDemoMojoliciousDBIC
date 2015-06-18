@@ -1,0 +1,16 @@
+@charset "utf-8";
+/* CSS Document */
+#noty
+{
+    background-color: #FFFF00;
+    font-family: Segoe UI,verdana,arial;
+    font-size: 14px;
+    height: auto;
+    left: 0;
+    position: fixed;
+    text-align: center;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+}
+

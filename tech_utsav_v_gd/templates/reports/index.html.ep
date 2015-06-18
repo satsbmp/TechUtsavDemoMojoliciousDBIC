@@ -1,0 +1,53 @@
+% layout 'techutsav';
+% title 'Reports';
+
+<link rel="stylesheet" type="text/css" media="screen" href="/css/report.css" />
+
+% use Tie::IxHash;
+% my %columns;
+% tie %columns, "Tie::IxHash";
+% my $report_types= {tac=>'tacrequest',stnry=>'stationary',lptp=>'laptop',vstr=>'visitor'};
+%# CourierEntryReport=>'courier'
+%  %columns= ( tac => 'TAC Reports', stnry => 'Stationary Report', lptp => 'Laptop Entry', vstr => 'Visitor Entry' );
+
+
+% my $type= 'rprts';
+
+<div id="results" class="clearfix"> 
+          <div class="page-head pull-left">
+              <h3>Reports</h3>
+          </div>
+</div>
+  
+<div class="heading clearfix">
+    <br/>
+    <div id="laptop_record_add_form" class="clearfix"> 
+        <%= form_for '/rprts/show' =>(id=>'reports')=>(method=>'post')=>(class=>'clearfix')=>begin %>
+            <div class="pull-left bar-right">           
+                    <div id="form_field_name" class="clearfix form-margin-top">
+                        <b class="view-small pull-left ">   Report type :	</b>
+                           <select class="style-box pull-left" name="reporttype">
+                                %  foreach my $i ( keys %columns){
+                                    <option value="<%= $i %>"> <%= $columns{$i} %></option>
+                                % }
+                            </select>                  
+                    </div>
+            </div>
+            <div class="btn-margin pull-left">
+                <div id="form_submit_button">
+                        <input class="button-style" type="submit" value="Get Reports" />
+                </div>
+            </div>
+            <br/>
+        <%= end %>
+    </div>
+    % if ( defined $report_type ){
+        % my $template=''.$report_types->{$report_type}.'/'.$report_type;
+        % print "TEMPLATEFILE: $template";
+        %#= include "reports/$report_type";
+    % }
+</div>
+
+
+      
+  

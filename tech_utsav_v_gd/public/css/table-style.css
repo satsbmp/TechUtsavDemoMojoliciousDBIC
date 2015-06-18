@@ -1,0 +1,26 @@
+@charset "utf-8";
+/* CSS Document */
+.pull-left{
+	float:left;
+}
+.pull-right{
+	float:right;
+}
+#form_field_data{
+	padding:8px !important;
+	font-size:14px !important;
+}
+
+.table-bg-light{
+	background-color:#fafafa;
+}
+.table-bg-dark{
+	background-color:#e6e6e5;
+}
+
+#form_columns{
+	background-color:#b4b4b4 !important;
+	color:#fff !important;
+	padding:6px !important;
+	font-weight:normal !important;
+}

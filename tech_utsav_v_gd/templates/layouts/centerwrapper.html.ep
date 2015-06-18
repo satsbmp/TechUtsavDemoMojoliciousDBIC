@@ -1,0 +1,15 @@
+<div id="centerwrapper">
+  <!-- ********************************************************************* -->
+          %#HEader STARTS HERE        
+              %= include 'layouts/header'       
+          %#HEader ENDS HERE
+          <!-- ********************************************************************* -->  
+          %#BODY STARTS HERE                    
+            %= include 'layouts/content'
+          %#BODY ENDS HERE
+          <!-- ********************************************************************* -->
+          %#Footer  STARTS HERE
+            %= include 'layouts/footer'
+          %#Footer ENDS HERE
+          <!-- ********************************************************************* -->
+</div>

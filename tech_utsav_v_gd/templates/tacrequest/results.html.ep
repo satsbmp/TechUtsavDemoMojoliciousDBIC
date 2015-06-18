@@ -1,0 +1,42 @@
+% use Tie::IxHash;
+% my %columns = undef;
+% tie %columns, "Tie::IxHash";
+% %columns = %{$result->{header}->{columnss}};
+
+<div id="form_columns">
+				% foreach my $column ( values %columns ){
+								<b><div id="form_field_name">
+												<%= $column %>
+								</div></b>
+				% }
+
+</div>
+
+% my $count =0;
+% foreach my $i (@{$result->{data}}){				
+				% if ($count % 2 == 0 ) {
+								<div id="row" class="table-bg-light">
+				% } else {
+								<div id="row" class="table-bg-dark">
+				% }
+				
+						<form action="/tac/render" method="get">
+								% foreach my $column(keys %columns ){								
+										 
+										 <div id="form_field_data">
+												% if ( $column =~ /date|time/i ) {										   
+														   %= $self->db->resultset('Tacrequest')->date_ddmmyyyy_format($i);
+												% }
+												% elsif ( $column =~ /tac_returned/i ) {
+														<input name="tacid" type="hidden" value="<%=$i->tacid %>" />
+														<input class="push-right button-style" type="submit" value="ReturnTAC" />														
+												% } else {
+														%= $i->$column;
+												%}					 
+										</div>								
+								 % }				
+						</form>
+				</div>
+				% $count++;
+% }
+%= include 'layouts/pagination';

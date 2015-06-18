@@ -1,0 +1,35 @@
+#laptop_checkout,#laptop_checkin,#laptop_record_add{
+    float:left;
+}
+#form_container{
+    clear:both;
+}
+#others{
+    height: 40%;
+}
+#result{
+    height: 55%;
+}
+#laptop_checkout_form,#laptop_checkin_form{
+    float:left;
+    height:30%;
+    width:30%;
+    border: 1px dotted green;
+    display:none;
+}
+#laptop_record_add_form{
+    clear:both;
+    height:20%;
+    width:90%;
+    display:none;
+}
+#text_field{
+    width: 124px;
+}
+#field{
+    width:120px;
+}
+#form{
+    padding: 2px 2px 2px 2px;
+    margin : 2px 2px 2px 2px;
+}

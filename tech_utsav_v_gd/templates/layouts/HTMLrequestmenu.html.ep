@@ -1,0 +1,11 @@
+<div id="requestmenu">
+<div id="alignmenu">
+  <div id="button"> <a href="/tac"><button type="button">TACRequest          </button></a></div>
+  <div id="button"> <a href="/lptp"><button type="button">LaptopEntry       </button></a></div>
+  <div id="button"> <a href="/vstr"><button type="button">VisitorEntry      </button></a></div>
+  <div id="button"> <a href="/stnry"><button type="button">StationaryRequest </button></a></div>
+  <div id="button"> <%= link_to 'More' => '/tac' %>                                             </div>
+  <div id="moretest"><a href="<%= url_for('/tac')->to_abs %>">TACRequest                    </a></div>
+  </div>
+</div>
+

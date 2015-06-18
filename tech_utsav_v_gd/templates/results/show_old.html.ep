@@ -1,0 +1,105 @@
+% layout 'techutsav';
+% title 'TechUtsav-TACRequest-Results';
+
+% my $result=$self->stash('result');
+% my $type= $self->stash('type');
+%# print Data::Dumper::Dumper($self->stash('result'));
+
+<div id="results">
+
+<div id="results">
+% if ( $type =~ /tac/) {
+    <div id="tacresults">
+        <div id="resultsheading">
+                                <center>
+                                <table>
+                                <tr align = "left">
+                                <td>EmployeeID:</td>
+                                <td>$result</td>
+                                </tr>
+                                <tr align = "left">
+                                <td>EmployeeName:</td>
+                                <td>Name</td>
+                                </tr>
+                                <tr align = "left">
+                                <td>TAC Count:</td>
+                                <td>Name</td>
+                                </tr>
+                                </table>
+                               
+        </div>
+        <br/>   
+                                <div id="qwe">
+                                <input type="radio" value = "Add Tac"/><label for="Add Tac">Add Tac</label>
+                                <input type="radio" value = "Render Tac"/><label for="Render Tac">Render Tac</label><br><br><br>
+                                Enter the TAC Number:<input type="text" />
+                                <input type="submit" value = "Submit"/>           
+            </center>                          
+                                </div>
+                               
+    </div>
+% }
+
+
+
+% if ( $type =~ /testtac/) {
+    <div id="tacresults">
+        <div id="resultsheading">
+            <div id="field">EmployeeID</div>
+            <div id="field">TACCount</div>
+        </div>
+        <br/>
+        % for my $i ( keys $result ) { 
+            <div id="resultsdata">                      
+                <div id="field">
+                    <%= $i %>
+                </div>
+                <div id="field">
+                    <%= $result->{$i} %>
+                </div>                
+            </div>
+            <br/>
+        %}        
+    </div>
+% }
+
+% if ( $type =~ /stnry/) {
+<div id="">
+    <div id="field">EmployeeID</div><div id="field">TACCount</div>
+    % for my $i (keys $result){
+        <div id="field">
+            <%= $i %>
+        </div>
+        <div id="field">
+            <%= $result %>
+        </div>
+    %}
+</div>
+% }
+
+% if ( $type =~ /location/i) {
+    <div id="results">
+        <div id="resultsheading">
+            <div id="field">LocationID</div>
+            <div id="field">Locations</div>
+        </div>
+        <br/>
+        <div id="resultsdata">       
+            %# for my $i (keys %$result){
+            % foreach my $i (@$result){
+                <div id="row">
+                % foreach my $value (@$i){
+                    <div id="field">                        
+                        <%= $value %>
+                    </div>
+                % }
+                <br/>
+                </div>
+            % }
+        </div>
+    </div>
+% }
+
+</div>
+
+

@@ -1,0 +1,19 @@
+% my $type = $self->stash('type') || param('type') || 'tac';
+
+% print "\nEMPLOYEE SEARCH: $type:\n";
+<div id="form">
+		<%= form_for "/$type/show" =>(method=>'post')=>begin %>        
+				 <!--search form starts-->
+				<div class="search pull-right">
+								<div id="form_field_name" class="clearfix">
+												<b class="normal pull-left">    Employee Id :	</b>
+												<input class="style-box pull-left search-box" name="empId" type="text" size="25" /> 
+												<input class="button-style add-btn-margin pull-left" type="submit" value="Search" />
+								</div>
+				</div>
+				<!--search ends-->
+				<!--   <hr />-->
+				<br/>
+		<%= end %>
+        </form>
+</div>

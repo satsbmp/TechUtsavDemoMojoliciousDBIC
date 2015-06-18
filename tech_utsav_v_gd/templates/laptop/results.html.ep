@@ -1,0 +1,46 @@
+% use Tie::IxHash;
+% my %columns = undef;
+% tie %columns, "Tie::IxHash";
+% %columns = %{$result->{header}->{columns}};
+
+%# my @columns=(qw/LaptopSerialNo LaptopMake LaptopType CreateDate/);
+%# my @columns=(qw/laptop_serial_id laptop_company_name laptoptype/);
+
+<div id="form_columns">
+				% foreach my $column ( values %columns ){
+								<b>
+											<div id="form_field_name">
+														   <%= $column %>
+											</div>
+								</b>
+				% }
+
+</div>
+% my $count =0;
+% foreach my $i (@{$result->{data}->{entries}}){
+		   % next if $i->check_out_datetime =~ m/^\d{4}\-\d{2}\-/;
+		   % if ($count % 2 == 0 ) {
+					  <div id="row" class="table-bg-light">
+		   % } else {
+					  <div id="row" class="table-bg-dark">
+		   % }
+					  <form action="/lptp/checkout" method="get">
+								 % foreach my $column(keys %columns){
+											<div id="form_field_data">
+													   % if ( $column =~ /ABCDcheck_in/i ) {
+																  %= $self->db->resultset('LaptopEntry')->date_ddmmyyyy_format($i->check_in_datetime)
+													   % } elsif($column =~ /check_out_datetime/){
+																  <input name="laptop_serial_id" type="hidden" value="<%=$i->laptop_serial_id %>" />
+																  <input class="push-right button-style" type="submit" value="Checkout" />													  
+													   % }else {
+																 %= $i->$column;
+													   % }
+										   
+										   </div>
+									% }						 								
+					  </form>
+		   </div>
+		   % $count++;
+% }
+<br/>
+%= include 'layouts/pagination';

@@ -1,0 +1,32 @@
+[Wed Sep 24 11:26:13 2014] [info] Listening at "https://127.0.0.1:443".
+[Wed Sep 24 11:26:13 2014] [info] Listening at "http://127.0.0.1:3000".
+[Wed Sep 24 11:27:01 2014] [error] Global symbol "$result" requires explicit package name at template reports/index.html.ep line 38.
+Global symbol "$checkin_type" requires explicit package name at template reports/index.html.ep line 42.
+Global symbol "$checkin_type" requires explicit package name at template reports/index.html.ep line 42.
+33:     </form>
+34: 
+35: </div>
+36: 
+37:        
+38:         % if ( defined $result ) {
+39:                   %= include 'employee/details';
+40:                   <br/><br/><br/>
+41:                   
+42:                 % if ( defined $checkin_type &&  $checkin_type =~ /checkin/ ) {
+43:                         %= include 'laptop/checkin';
+
+[Wed Sep 24 11:27:31 2014] [error] Global symbol "$result" requires explicit package name at template reports/index.html.ep line 38.
+Global symbol "$checkin_type" requires explicit package name at template reports/index.html.ep line 42.
+Global symbol "$checkin_type" requires explicit package name at template reports/index.html.ep line 42.
+33:     </form>
+34: 
+35: </div>
+36: 
+37:        
+38:         % if ( defined $result ) {
+39:                   %= include 'employee/details';
+40:                   <br/><br/><br/>
+41:                   
+42:                 % if ( defined $checkin_type &&  $checkin_type =~ /checkin/ ) {
+43:                         %= include 'laptop/checkin';
+

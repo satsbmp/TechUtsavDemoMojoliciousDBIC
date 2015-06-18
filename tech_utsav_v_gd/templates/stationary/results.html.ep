@@ -1,0 +1,35 @@
+% use Tie::IxHash;
+% my %columns = undef;
+% tie %columns, "Tie::IxHash";
+% %columns = %{$result->{header}->{columns}};
+
+<div id="form_columns">
+				% foreach my $column ( values %columns ){
+								<b><div id="form_field_name">
+												<%= $column %>
+								</div></b>
+				% }
+
+</div>
+
+% my $count =0;
+% foreach my $i (@{$result->{data}->{records}}){				
+				% if ($count % 2 == 0 ) {
+								<div id="row" class="table-bg-light">
+				% } else {
+								<div id="row" class="table-bg-dark">
+				% }			
+								% foreach my $column(keys %columns ){
+										 <div id="form_field_data">
+												% if ($column =~ /item_name/){
+																		%= $result->{data}->{entries}->item_name_by_id($i->stationary_id );
+												% }else{
+																		%= $i->$column;
+												% }
+										</div>	
+								 % }
+				</div>
+				% $count++;
+				% print "\nCOUNTCOPUNT:$count:";
+% }
+%= include 'layouts/pagination';

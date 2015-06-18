@@ -1,0 +1,50 @@
+#use Modern::Perl;
+use DBIx::Class::Schema::Loader 'make_schema_at';
+
+my $DEBUG = @ARGV and $ARGV[0] =~ /^\-[\-]*v/;
+
+print $DBIx::Class::Schema::Loader::VERSION ;#if $DEBUG;
+my @dsn = 'dbi:SQLite:dbname=techutsav.db';
+
+#my @dsn = 'dbi:mysql:dbname=techutsav.db;user=techutsav;password=abcd';
+
+my $options = {
+  debug          => $DEBUG,
+  dump_directory => './lib',
+  components     => [qw/InflateColumn::DateTime /],
+  generate_pod   => 0,
+};
+
+make_schema_at(Schema => $options, \@dsn);
+
+=head1 NAME
+
+generate_dbic_schema
+
+=head1 USAGE
+
+perl generate_dbic_schema
+
+=cut
+
+=pod
+
+dbicdump -o dump_directory=./lib \
+    -o components='["InflateColumn::DateTime"]' \
+    MyApp::Schema dbi:SQLite:./foo.db
+
+  $ dbicdump -o dump_directory=./lib \
+    -o components='["InflateColumn::DateTime"]' \
+    MyApp::Schema dbi:SQLite:./foo.db '{ quote_char => "\"" }'
+
+  $ dbicdump -o dump_directory=.\lib -o components='["InflateColumn::DateTime"]' -o preserve_case=1 -o generate_pod=0 Schema dbi:SQLite:database=.\techutsav.db
+dbicdump -o dump_directory=.\lib -o components=InflateColumn::DateTime -o preserve_case=1 -o generate_pod=0 Schema dbi:SQLite:database=techutsav.db
+
+  $ dbicdump -o dump_directory=./lib \
+    -o components='["InflateColumn::DateTime"]' \
+    MyApp::Schema 'dbi:mysql:database=foo;host=domain.tld;port=3306' user pass
+#http://www.oliverguenther.de/2014/04/applications-with-mojolicious-part-four-database-schemas-with-dbixclass/
+#http://suryahunter.com/wiki/hunter/database/orm/dbic_tutorial
+
+
+=cut    

@@ -1,0 +1,29 @@
+% layout 'techutsav';
+% title 'TechUtsav-EmployeeSaerch';
+
+<div id="employeesearch">
+<h1>EmployeeSearch</h1>
+<%#= $self->url_for %>
+<br/>
+% my $a="Enter Employee ID";
+%# <input type="hidden"><%= $a %></input>
+<form action="<%= url_for("results/tac")%>" method="get">
+                            <fieldset>
+                            <br/>
+                            <div id="employeesearchform">
+                                                        <div id="field"><b>EmployeeId</b></div>
+                                                        <div id="field">
+                                                                                    <input type="text" name="empId"></input>                                                                                    
+                                                        </div>
+                                                        <br/>
+                                                        <div id="submit">
+                                                                                    <input type="submit" style="width:100px;" name="submit" value="submit" />
+                                                        </div>                            
+                                                        <br/>
+                            </div>
+                            </fieldset>
+</form>
+</div>
+<div>
+%= link_to 'Location' => 'results/location'
+</div>

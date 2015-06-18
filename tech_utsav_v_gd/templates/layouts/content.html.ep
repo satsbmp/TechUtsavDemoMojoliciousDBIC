@@ -1,0 +1,5 @@
+<div id="bodycontainer" class="clearfix">  
+  %= include 'layouts/requestmenu';
+  %= include 'layouts/requestpage';
+</div>
+ 

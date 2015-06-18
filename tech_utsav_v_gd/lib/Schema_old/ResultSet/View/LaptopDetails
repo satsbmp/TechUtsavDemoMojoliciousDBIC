@@ -1,0 +1,19 @@
+package Schema::ResultSet::View::LaptopDetails;
+
+use strict;
+use warnings;
+use base 'DBIx::Class::ResultSet';
+
+sub laptop_details_all {
+    my ( $self, $employee_id ) = @_;
+    my $id = $character->character_id;
+    return $self->search( {}, { bind => [ $employee_id ] } );
+}
+
+sub laptop_details {
+    my ( $self, $employee_id, $laptop_id ) = @_;
+    my $id = $character->character_id;
+    return $self->search( {laptop_id => $laptop_id}, { bind => [ $employee_id ] } );
+}
+
+1;

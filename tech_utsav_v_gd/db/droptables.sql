@@ -1,0 +1,10 @@
+drop table employee;
+drop table roles;
+drop table employee_role;
+drop table location;
+drop table taclist;
+drop table tacrequest;
+drop table stationary_items;
+drop table stationary_request;
+drop table laptop_entry;
+drop table visitor_entry;

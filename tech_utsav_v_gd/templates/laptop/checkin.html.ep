@@ -1,0 +1,25 @@
+<div id="laptop_record_add_form" class="clearfix">  
+		<%= form_for '/lptp/checkin' =>(method=>'get')=>(class=>"clearfix")=>begin %>
+							
+				<div class="pull-left bar-right">                        
+						<div id="form_field_name" class="clearfix form-margin-top">
+								<b class="view-small pull-left ">  Serial Id : 	</b>								
+								<input list="laptop_serial_id" name="laptop_serial_id" class="style-box pull-left long-size-box bg-img" required>
+										<datalist id="laptop_serial_id">
+												% foreach my $i (@{$result->{data}->{records}}){														
+														<option>
+																<%= $i->laptop_serial_id %>
+														</option>
+												%}  
+										</datalist>
+								</input> 
+						</div>
+				</div>
+				<div class="btn-margin pull-left">
+						<div id="form_submit_button_checkin">					
+								 <input class="button-style" type="submit" value="Laptop Checkin" />								 
+						</div>
+				</div>
+				<br/>
+		<%= end %>
+</div>

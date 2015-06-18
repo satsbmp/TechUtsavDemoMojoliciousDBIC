@@ -1,0 +1,39 @@
+% use Tie::IxHash;
+
+% my $reporttype            = $self->stash('type');
+% my $report                = $self->stash('report');
+% my $report_tac_fields     = $self->stash('fields');
+
+% my %reports_tac;
+% my %reports_tac_values;
+% tie %reports_tac, "Tie::IxHash";
+% tie %reports_tac_values, "Tie::IxHash";
+
+% %reports_tac=%{$report};
+% %reports_tac_values=%{$report->{values}};
+% my $count =0;
+<div id="tacreport"> 
+% print " KEYS $_\n" foreach (keys %{$report});
+% for my $key ( @{ $reports_tac{fields} } ) {
+    <div id="form_columns">
+        % for my $field ( @{ $reports_tac{display_fields}->{$key} } ) {
+           <b><div id="form_field_name"><%= $field %></div></b>
+        %}
+    </div>
+    % if ($count % 2 == 0 ) {
+					  <div id="row" class="table-bg-light">
+		   % } else {
+					  <div id="row" class="table-bg-dark">
+		   % }
+    % for my $fieldref ( @{ $reports_tac{values}->{$key} } ) {
+            % for my $field ( @{ $reports_tac{display_fields}->{$key} } ) {
+               <div id="form_field_data"><%= $fieldref->{$field} %></div>
+            %}          
+        
+    %}
+    </div>
+    <br/><br/>
+    % $count++;
+% }
+
+</div>

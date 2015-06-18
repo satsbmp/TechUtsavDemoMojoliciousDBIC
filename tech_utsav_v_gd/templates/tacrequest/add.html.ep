@@ -1,0 +1,16 @@
+<div id="laptop_record_add_form" class="clearfix">
+        <form class="clearfix" action="/tac/add" method="post">                
+                        <div class="pull-left bar-right">                        
+                                <div id="form_field_name" class="clearfix form-margin-top">
+                                        <b class="view-small pull-left ">    TAC Id : 	</b>
+                                        <input class="style-box pull-left long-size-box bg-img" name="tacid" type="text"  />  
+                                </div>          
+                        </div>
+                        <div class="btn-margin pull-left">
+                                <div id="form_submit_button">
+                                        <input class="button-style" type="submit" value="Request NewTAC" />
+                                </div>
+                        </div>
+                        <br/>
+        </form>
+</div>
